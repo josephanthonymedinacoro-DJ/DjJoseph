@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR FIJA */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10%;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: orange;
+}
+
+/* HERO CON FONDO */
+.hero {
+    height: 100vh;
+    background: url("imagenes/fondo.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* BOTÓN ANIMADO */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: orange;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* TARJETAS */
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 10%;
+    background: #111;
+}
+
+.card {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: orange;
+    color: black;
+}
+/* CONTACTO */
+
+.contacto {
+    padding: 80px 10%;
+    background: #111;
+    text-align: center;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contacto button {
+    padding: 12px;
+    border: none;
+    background: orange;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto button:hover {
+    background: white;
+    transform: scale(1.05);
+}
+/* ANIMACION AL CARGAR */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero,
+.card,
+.contacto {
+    animation: fadeIn 1s ease-in-out;
+}
+/* ========================= */
+/* RESPONSIVE PARA MOVILES */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+
+    /* Hero */
+    .hero {
+        height: 80vh;
+        padding: 20px;
+    }
+
+    /* Tarjetas */
+    .card-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+}
+.online {
+    text-align: center;
+    padding: 60px;
+    background: #222;
+}
+
+.btn-online {
+    display: inline-block;
+    padding: 15px 25px;
+    background: orange;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-online:hover {
+    background: white;
+    transform: scale(1.1);
+}
